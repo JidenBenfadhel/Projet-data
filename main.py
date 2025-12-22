@@ -7,9 +7,12 @@ app.layout = html.Div([
     html.H1('Multi-page app with Dash Pages'),
     html.Div([
         html.Div(
-            dcc.Link(f"{page['name']} - {page['path']}", href=page["relative_path"])
+            dcc.Link(children=page['name'],
+                     href=page["relative_path"],
+                     style={}),
         ) for page in dash.page_registry.values()
-    ]),
+    ],
+    style={"display": "flex", "gap":"32px"}),
     dash.page_container
 ])
 
