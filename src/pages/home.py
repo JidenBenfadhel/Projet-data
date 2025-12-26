@@ -40,7 +40,7 @@ def update_histogramme(selected_year, selected_range):
     )
 
     fig.update_layout(
-        xaxis_title="Valeur",
+        xaxis_title="Nombre de naissances",
         yaxis_title="Nombre de communes"
     )
 
